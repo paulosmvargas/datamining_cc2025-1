@@ -1,0 +1,900 @@
+.
+├── test
+│   ├── images
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_004.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_012.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_002.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_004.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_006.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_007.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_011.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_034.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_037.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_041.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_059.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_061.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_088.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_089.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_100.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_109.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_120.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_143.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_144.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_145.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_001.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_003.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_006.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_009.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_012.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_019.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_023.jpg
+│   │   ├── MRC-5_E02_C6_000.jpg
+│   │   ├── MRC-5_E02_C6_008.jpg
+│   │   ├── MRC-5_E02_C6_014.jpg
+│   │   ├── MRC-5_E02_C6_027.jpg
+│   │   ├── MiaPaca-2_E01_D5_003.jpg
+│   │   ├── MiaPaca-2_E01_D5_040.jpg
+│   │   ├── MiaPaca-2_E01_D5_041.jpg
+│   │   ├── MiaPaca-2_E01_D5_042.jpg
+│   │   ├── MiaPaca-2_E01_D5_066.jpg
+│   │   ├── MiaPaca-2_E01_D5_078.jpg
+│   │   ├── MiaPaca-2_E01_D5_080.jpg
+│   │   ├── MiaPaca-2_E01_D5_103.jpg
+│   │   ├── MiaPaca-2_E01_D5_128.jpg
+│   │   ├── MiaPaca-2_E01_D5_133.jpg
+│   │   ├── MiaPaca-2_E01_D5_141.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_005.jpg
+│   │   └── UFH-001_Control_2_Pozice_23_044.jpg
+│   └── masks
+│       ├── 5min, low glucose, 10% FBS, Ex 07_004.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_012.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_002.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_004.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_006.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_007.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_011.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_034.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_037.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_041.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_059.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_061.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_088.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_089.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_100.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_109.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_120.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_143.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_144.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_145.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_001.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_003.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_006.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_009.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_012.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_019.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_023.jpg
+│       ├── MRC-5_E02_C6_000.jpg
+│       ├── MRC-5_E02_C6_008.jpg
+│       ├── MRC-5_E02_C6_014.jpg
+│       ├── MRC-5_E02_C6_027.jpg
+│       ├── MiaPaca-2_E01_D5_003.jpg
+│       ├── MiaPaca-2_E01_D5_040.jpg
+│       ├── MiaPaca-2_E01_D5_041.jpg
+│       ├── MiaPaca-2_E01_D5_042.jpg
+│       ├── MiaPaca-2_E01_D5_066.jpg
+│       ├── MiaPaca-2_E01_D5_078.jpg
+│       ├── MiaPaca-2_E01_D5_080.jpg
+│       ├── MiaPaca-2_E01_D5_103.jpg
+│       ├── MiaPaca-2_E01_D5_128.jpg
+│       ├── MiaPaca-2_E01_D5_133.jpg
+│       ├── MiaPaca-2_E01_D5_141.jpg
+│       ├── UFH-001_Control_2_Pozice_23_005.jpg
+│       └── UFH-001_Control_2_Pozice_23_044.jpg
+├── train
+│   ├── images
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_000.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_001.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_002.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_003.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_005.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_006.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_007.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_008.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_009.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_010.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_011.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_013.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_014.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_015.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_016.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_017.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_018.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_019.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_020.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_021.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_022.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_023.jpg
+│   │   ├── 5min, low glucose, 10% FBS, Ex 07_024.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_000.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_001.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_003.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_005.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_008.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_009.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_010.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_012.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_013.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_014.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_015.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_016.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_017.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_018.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_019.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_020.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_021.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_022.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_023.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_024.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_025.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_026.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_027.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_028.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_029.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_030.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_031.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_032.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_033.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_035.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_036.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_038.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_039.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_040.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_042.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_043.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_044.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_045.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_046.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_047.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_048.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_049.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_050.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_051.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_052.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_053.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_054.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_055.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_056.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_057.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_058.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_060.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_062.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_063.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_064.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_065.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_066.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_067.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_068.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_069.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_070.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_071.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_072.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_073.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_074.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_075.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_076.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_077.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_078.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_079.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_080.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_081.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_082.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_083.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_084.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_085.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_086.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_087.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_090.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_091.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_092.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_093.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_094.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_095.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_096.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_097.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_098.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_099.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_101.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_102.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_103.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_104.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_105.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_106.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_107.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_108.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_110.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_111.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_112.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_113.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_114.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_115.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_116.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_117.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_118.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_119.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_121.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_122.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_123.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_124.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_125.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_126.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_127.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_128.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_129.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_130.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_131.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_132.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_133.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_134.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_135.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_136.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_137.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_138.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_139.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_140.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_141.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_142.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_146.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_147.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_148.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 01_149.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_000.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_002.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_004.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_005.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_007.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_008.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_010.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_011.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_013.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_014.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_015.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_016.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_017.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_018.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_020.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_021.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_022.jpg
+│   │   ├── 5min, low glucose, 5% FBS, Ex 02_024.jpg
+│   │   ├── MRC-5_E02_C6_001.jpg
+│   │   ├── MRC-5_E02_C6_002.jpg
+│   │   ├── MRC-5_E02_C6_003.jpg
+│   │   ├── MRC-5_E02_C6_004.jpg
+│   │   ├── MRC-5_E02_C6_005.jpg
+│   │   ├── MRC-5_E02_C6_006.jpg
+│   │   ├── MRC-5_E02_C6_007.jpg
+│   │   ├── MRC-5_E02_C6_009.jpg
+│   │   ├── MRC-5_E02_C6_010.jpg
+│   │   ├── MRC-5_E02_C6_011.jpg
+│   │   ├── MRC-5_E02_C6_012.jpg
+│   │   ├── MRC-5_E02_C6_013.jpg
+│   │   ├── MRC-5_E02_C6_015.jpg
+│   │   ├── MRC-5_E02_C6_016.jpg
+│   │   ├── MRC-5_E02_C6_017.jpg
+│   │   ├── MRC-5_E02_C6_018.jpg
+│   │   ├── MRC-5_E02_C6_019.jpg
+│   │   ├── MRC-5_E02_C6_020.jpg
+│   │   ├── MRC-5_E02_C6_021.jpg
+│   │   ├── MRC-5_E02_C6_022.jpg
+│   │   ├── MRC-5_E02_C6_023.jpg
+│   │   ├── MRC-5_E02_C6_024.jpg
+│   │   ├── MRC-5_E02_C6_025.jpg
+│   │   ├── MRC-5_E02_C6_026.jpg
+│   │   ├── MRC-5_E02_C6_028.jpg
+│   │   ├── MRC-5_E02_C6_029.jpg
+│   │   ├── MRC-5_E02_C6_030.jpg
+│   │   ├── MRC-5_E02_C6_031.jpg
+│   │   ├── MRC-5_E02_C6_032.jpg
+│   │   ├── MRC-5_E02_C6_033.jpg
+│   │   ├── MRC-5_E02_C6_034.jpg
+│   │   ├── MRC-5_E02_C6_035.jpg
+│   │   ├── MRC-5_E02_C6_051.jpg
+│   │   ├── MRC-5_E02_C6_071.jpg
+│   │   ├── MRC-5_E02_C6_091.jpg
+│   │   ├── MRC-5_E02_C6_111.jpg
+│   │   ├── MRC-5_E02_C6_131.jpg
+│   │   ├── MRC-5_E02_C6_151.jpg
+│   │   ├── MRC-5_E02_C6_171.jpg
+│   │   ├── MRC-5_E02_C6_191.jpg
+│   │   ├── MRC-5_E02_C6_211.jpg
+│   │   ├── MRC-5_E02_C6_231.jpg
+│   │   ├── MiaPaca-2_E01_D5_000.jpg
+│   │   ├── MiaPaca-2_E01_D5_001.jpg
+│   │   ├── MiaPaca-2_E01_D5_002.jpg
+│   │   ├── MiaPaca-2_E01_D5_004.jpg
+│   │   ├── MiaPaca-2_E01_D5_005.jpg
+│   │   ├── MiaPaca-2_E01_D5_006.jpg
+│   │   ├── MiaPaca-2_E01_D5_007.jpg
+│   │   ├── MiaPaca-2_E01_D5_008.jpg
+│   │   ├── MiaPaca-2_E01_D5_009.jpg
+│   │   ├── MiaPaca-2_E01_D5_010.jpg
+│   │   ├── MiaPaca-2_E01_D5_011.jpg
+│   │   ├── MiaPaca-2_E01_D5_012.jpg
+│   │   ├── MiaPaca-2_E01_D5_013.jpg
+│   │   ├── MiaPaca-2_E01_D5_014.jpg
+│   │   ├── MiaPaca-2_E01_D5_015.jpg
+│   │   ├── MiaPaca-2_E01_D5_016.jpg
+│   │   ├── MiaPaca-2_E01_D5_017.jpg
+│   │   ├── MiaPaca-2_E01_D5_018.jpg
+│   │   ├── MiaPaca-2_E01_D5_019.jpg
+│   │   ├── MiaPaca-2_E01_D5_020.jpg
+│   │   ├── MiaPaca-2_E01_D5_021.jpg
+│   │   ├── MiaPaca-2_E01_D5_022.jpg
+│   │   ├── MiaPaca-2_E01_D5_023.jpg
+│   │   ├── MiaPaca-2_E01_D5_024.jpg
+│   │   ├── MiaPaca-2_E01_D5_025.jpg
+│   │   ├── MiaPaca-2_E01_D5_026.jpg
+│   │   ├── MiaPaca-2_E01_D5_027.jpg
+│   │   ├── MiaPaca-2_E01_D5_028.jpg
+│   │   ├── MiaPaca-2_E01_D5_029.jpg
+│   │   ├── MiaPaca-2_E01_D5_030.jpg
+│   │   ├── MiaPaca-2_E01_D5_031.jpg
+│   │   ├── MiaPaca-2_E01_D5_032.jpg
+│   │   ├── MiaPaca-2_E01_D5_033.jpg
+│   │   ├── MiaPaca-2_E01_D5_034.jpg
+│   │   ├── MiaPaca-2_E01_D5_035.jpg
+│   │   ├── MiaPaca-2_E01_D5_036.jpg
+│   │   ├── MiaPaca-2_E01_D5_037.jpg
+│   │   ├── MiaPaca-2_E01_D5_038.jpg
+│   │   ├── MiaPaca-2_E01_D5_039.jpg
+│   │   ├── MiaPaca-2_E01_D5_043.jpg
+│   │   ├── MiaPaca-2_E01_D5_044.jpg
+│   │   ├── MiaPaca-2_E01_D5_045.jpg
+│   │   ├── MiaPaca-2_E01_D5_046.jpg
+│   │   ├── MiaPaca-2_E01_D5_047.jpg
+│   │   ├── MiaPaca-2_E01_D5_048.jpg
+│   │   ├── MiaPaca-2_E01_D5_049.jpg
+│   │   ├── MiaPaca-2_E01_D5_050.jpg
+│   │   ├── MiaPaca-2_E01_D5_051.jpg
+│   │   ├── MiaPaca-2_E01_D5_052.jpg
+│   │   ├── MiaPaca-2_E01_D5_053.jpg
+│   │   ├── MiaPaca-2_E01_D5_054.jpg
+│   │   ├── MiaPaca-2_E01_D5_055.jpg
+│   │   ├── MiaPaca-2_E01_D5_056.jpg
+│   │   ├── MiaPaca-2_E01_D5_057.jpg
+│   │   ├── MiaPaca-2_E01_D5_058.jpg
+│   │   ├── MiaPaca-2_E01_D5_059.jpg
+│   │   ├── MiaPaca-2_E01_D5_060.jpg
+│   │   ├── MiaPaca-2_E01_D5_061.jpg
+│   │   ├── MiaPaca-2_E01_D5_062.jpg
+│   │   ├── MiaPaca-2_E01_D5_063.jpg
+│   │   ├── MiaPaca-2_E01_D5_064.jpg
+│   │   ├── MiaPaca-2_E01_D5_065.jpg
+│   │   ├── MiaPaca-2_E01_D5_067.jpg
+│   │   ├── MiaPaca-2_E01_D5_068.jpg
+│   │   ├── MiaPaca-2_E01_D5_069.jpg
+│   │   ├── MiaPaca-2_E01_D5_070.jpg
+│   │   ├── MiaPaca-2_E01_D5_071.jpg
+│   │   ├── MiaPaca-2_E01_D5_072.jpg
+│   │   ├── MiaPaca-2_E01_D5_073.jpg
+│   │   ├── MiaPaca-2_E01_D5_074.jpg
+│   │   ├── MiaPaca-2_E01_D5_075.jpg
+│   │   ├── MiaPaca-2_E01_D5_076.jpg
+│   │   ├── MiaPaca-2_E01_D5_077.jpg
+│   │   ├── MiaPaca-2_E01_D5_079.jpg
+│   │   ├── MiaPaca-2_E01_D5_081.jpg
+│   │   ├── MiaPaca-2_E01_D5_082.jpg
+│   │   ├── MiaPaca-2_E01_D5_083.jpg
+│   │   ├── MiaPaca-2_E01_D5_084.jpg
+│   │   ├── MiaPaca-2_E01_D5_085.jpg
+│   │   ├── MiaPaca-2_E01_D5_086.jpg
+│   │   ├── MiaPaca-2_E01_D5_087.jpg
+│   │   ├── MiaPaca-2_E01_D5_088.jpg
+│   │   ├── MiaPaca-2_E01_D5_089.jpg
+│   │   ├── MiaPaca-2_E01_D5_090.jpg
+│   │   ├── MiaPaca-2_E01_D5_091.jpg
+│   │   ├── MiaPaca-2_E01_D5_092.jpg
+│   │   ├── MiaPaca-2_E01_D5_093.jpg
+│   │   ├── MiaPaca-2_E01_D5_094.jpg
+│   │   ├── MiaPaca-2_E01_D5_095.jpg
+│   │   ├── MiaPaca-2_E01_D5_096.jpg
+│   │   ├── MiaPaca-2_E01_D5_097.jpg
+│   │   ├── MiaPaca-2_E01_D5_098.jpg
+│   │   ├── MiaPaca-2_E01_D5_099.jpg
+│   │   ├── MiaPaca-2_E01_D5_100.jpg
+│   │   ├── MiaPaca-2_E01_D5_101.jpg
+│   │   ├── MiaPaca-2_E01_D5_102.jpg
+│   │   ├── MiaPaca-2_E01_D5_104.jpg
+│   │   ├── MiaPaca-2_E01_D5_105.jpg
+│   │   ├── MiaPaca-2_E01_D5_106.jpg
+│   │   ├── MiaPaca-2_E01_D5_107.jpg
+│   │   ├── MiaPaca-2_E01_D5_108.jpg
+│   │   ├── MiaPaca-2_E01_D5_109.jpg
+│   │   ├── MiaPaca-2_E01_D5_110.jpg
+│   │   ├── MiaPaca-2_E01_D5_111.jpg
+│   │   ├── MiaPaca-2_E01_D5_112.jpg
+│   │   ├── MiaPaca-2_E01_D5_113.jpg
+│   │   ├── MiaPaca-2_E01_D5_114.jpg
+│   │   ├── MiaPaca-2_E01_D5_115.jpg
+│   │   ├── MiaPaca-2_E01_D5_116.jpg
+│   │   ├── MiaPaca-2_E01_D5_117.jpg
+│   │   ├── MiaPaca-2_E01_D5_118.jpg
+│   │   ├── MiaPaca-2_E01_D5_119.jpg
+│   │   ├── MiaPaca-2_E01_D5_120.jpg
+│   │   ├── MiaPaca-2_E01_D5_121.jpg
+│   │   ├── MiaPaca-2_E01_D5_122.jpg
+│   │   ├── MiaPaca-2_E01_D5_123.jpg
+│   │   ├── MiaPaca-2_E01_D5_124.jpg
+│   │   ├── MiaPaca-2_E01_D5_125.jpg
+│   │   ├── MiaPaca-2_E01_D5_126.jpg
+│   │   ├── MiaPaca-2_E01_D5_127.jpg
+│   │   ├── MiaPaca-2_E01_D5_129.jpg
+│   │   ├── MiaPaca-2_E01_D5_130.jpg
+│   │   ├── MiaPaca-2_E01_D5_131.jpg
+│   │   ├── MiaPaca-2_E01_D5_132.jpg
+│   │   ├── MiaPaca-2_E01_D5_134.jpg
+│   │   ├── MiaPaca-2_E01_D5_135.jpg
+│   │   ├── MiaPaca-2_E01_D5_136.jpg
+│   │   ├── MiaPaca-2_E01_D5_137.jpg
+│   │   ├── MiaPaca-2_E01_D5_138.jpg
+│   │   ├── MiaPaca-2_E01_D5_139.jpg
+│   │   ├── MiaPaca-2_E01_D5_140.jpg
+│   │   ├── MiaPaca-2_E01_D5_142.jpg
+│   │   ├── MiaPaca-2_E01_D5_143.jpg
+│   │   ├── MiaPaca-2_E01_D5_144.jpg
+│   │   ├── MiaPaca-2_E01_D5_145.jpg
+│   │   ├── MiaPaca-2_E01_D5_146.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_000.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_001.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_002.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_003.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_004.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_006.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_007.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_008.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_009.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_010.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_011.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_012.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_013.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_014.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_015.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_016.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_017.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_018.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_019.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_020.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_021.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_022.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_023.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_024.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_025.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_026.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_027.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_028.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_029.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_030.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_031.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_032.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_033.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_034.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_035.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_036.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_037.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_038.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_039.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_040.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_041.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_042.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_043.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_045.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_046.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_047.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_048.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_049.jpg
+│   │   ├── UFH-001_Control_2_Pozice_23_050.jpg
+│   │   └── UFH-001_Control_2_Pozice_23_051.jpg
+│   └── masks
+│       ├── 5min, low glucose, 10% FBS, Ex 07_000.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_001.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_002.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_003.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_005.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_006.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_007.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_008.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_009.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_010.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_011.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_013.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_014.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_015.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_016.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_017.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_018.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_019.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_020.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_021.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_022.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_023.jpg
+│       ├── 5min, low glucose, 10% FBS, Ex 07_024.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_000.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_001.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_003.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_005.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_008.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_009.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_010.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_012.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_013.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_014.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_015.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_016.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_017.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_018.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_019.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_020.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_021.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_022.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_023.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_024.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_025.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_026.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_027.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_028.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_029.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_030.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_031.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_032.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_033.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_035.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_036.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_038.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_039.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_040.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_042.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_043.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_044.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_045.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_046.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_047.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_048.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_049.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_050.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_051.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_052.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_053.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_054.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_055.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_056.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_057.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_058.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_060.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_062.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_063.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_064.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_065.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_066.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_067.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_068.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_069.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_070.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_071.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_072.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_073.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_074.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_075.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_076.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_077.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_078.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_079.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_080.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_081.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_082.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_083.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_084.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_085.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_086.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_087.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_090.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_091.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_092.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_093.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_094.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_095.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_096.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_097.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_098.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_099.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_101.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_102.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_103.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_104.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_105.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_106.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_107.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_108.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_110.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_111.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_112.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_113.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_114.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_115.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_116.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_117.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_118.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_119.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_121.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_122.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_123.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_124.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_125.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_126.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_127.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_128.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_129.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_130.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_131.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_132.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_133.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_134.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_135.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_136.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_137.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_138.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_139.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_140.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_141.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_142.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_146.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_147.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_148.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 01_149.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_000.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_002.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_004.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_005.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_007.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_008.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_010.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_011.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_013.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_014.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_015.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_016.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_017.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_018.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_020.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_021.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_022.jpg
+│       ├── 5min, low glucose, 5% FBS, Ex 02_024.jpg
+│       ├── MRC-5_E02_C6_001.jpg
+│       ├── MRC-5_E02_C6_002.jpg
+│       ├── MRC-5_E02_C6_003.jpg
+│       ├── MRC-5_E02_C6_004.jpg
+│       ├── MRC-5_E02_C6_005.jpg
+│       ├── MRC-5_E02_C6_006.jpg
+│       ├── MRC-5_E02_C6_007.jpg
+│       ├── MRC-5_E02_C6_009.jpg
+│       ├── MRC-5_E02_C6_010.jpg
+│       ├── MRC-5_E02_C6_011.jpg
+│       ├── MRC-5_E02_C6_012.jpg
+│       ├── MRC-5_E02_C6_013.jpg
+│       ├── MRC-5_E02_C6_015.jpg
+│       ├── MRC-5_E02_C6_016.jpg
+│       ├── MRC-5_E02_C6_017.jpg
+│       ├── MRC-5_E02_C6_018.jpg
+│       ├── MRC-5_E02_C6_019.jpg
+│       ├── MRC-5_E02_C6_020.jpg
+│       ├── MRC-5_E02_C6_021.jpg
+│       ├── MRC-5_E02_C6_022.jpg
+│       ├── MRC-5_E02_C6_023.jpg
+│       ├── MRC-5_E02_C6_024.jpg
+│       ├── MRC-5_E02_C6_025.jpg
+│       ├── MRC-5_E02_C6_026.jpg
+│       ├── MRC-5_E02_C6_028.jpg
+│       ├── MRC-5_E02_C6_029.jpg
+│       ├── MRC-5_E02_C6_030.jpg
+│       ├── MRC-5_E02_C6_031.jpg
+│       ├── MRC-5_E02_C6_032.jpg
+│       ├── MRC-5_E02_C6_033.jpg
+│       ├── MRC-5_E02_C6_034.jpg
+│       ├── MRC-5_E02_C6_035.jpg
+│       ├── MRC-5_E02_C6_051.jpg
+│       ├── MRC-5_E02_C6_071.jpg
+│       ├── MRC-5_E02_C6_091.jpg
+│       ├── MRC-5_E02_C6_111.jpg
+│       ├── MRC-5_E02_C6_131.jpg
+│       ├── MRC-5_E02_C6_151.jpg
+│       ├── MRC-5_E02_C6_171.jpg
+│       ├── MRC-5_E02_C6_191.jpg
+│       ├── MRC-5_E02_C6_211.jpg
+│       ├── MRC-5_E02_C6_231.jpg
+│       ├── MiaPaca-2_E01_D5_000.jpg
+│       ├── MiaPaca-2_E01_D5_001.jpg
+│       ├── MiaPaca-2_E01_D5_002.jpg
+│       ├── MiaPaca-2_E01_D5_004.jpg
+│       ├── MiaPaca-2_E01_D5_005.jpg
+│       ├── MiaPaca-2_E01_D5_006.jpg
+│       ├── MiaPaca-2_E01_D5_007.jpg
+│       ├── MiaPaca-2_E01_D5_008.jpg
+│       ├── MiaPaca-2_E01_D5_009.jpg
+│       ├── MiaPaca-2_E01_D5_010.jpg
+│       ├── MiaPaca-2_E01_D5_011.jpg
+│       ├── MiaPaca-2_E01_D5_012.jpg
+│       ├── MiaPaca-2_E01_D5_013.jpg
+│       ├── MiaPaca-2_E01_D5_014.jpg
+│       ├── MiaPaca-2_E01_D5_015.jpg
+│       ├── MiaPaca-2_E01_D5_016.jpg
+│       ├── MiaPaca-2_E01_D5_017.jpg
+│       ├── MiaPaca-2_E01_D5_018.jpg
+│       ├── MiaPaca-2_E01_D5_019.jpg
+│       ├── MiaPaca-2_E01_D5_020.jpg
+│       ├── MiaPaca-2_E01_D5_021.jpg
+│       ├── MiaPaca-2_E01_D5_022.jpg
+│       ├── MiaPaca-2_E01_D5_023.jpg
+│       ├── MiaPaca-2_E01_D5_024.jpg
+│       ├── MiaPaca-2_E01_D5_025.jpg
+│       ├── MiaPaca-2_E01_D5_026.jpg
+│       ├── MiaPaca-2_E01_D5_027.jpg
+│       ├── MiaPaca-2_E01_D5_028.jpg
+│       ├── MiaPaca-2_E01_D5_029.jpg
+│       ├── MiaPaca-2_E01_D5_030.jpg
+│       ├── MiaPaca-2_E01_D5_031.jpg
+│       ├── MiaPaca-2_E01_D5_032.jpg
+│       ├── MiaPaca-2_E01_D5_033.jpg
+│       ├── MiaPaca-2_E01_D5_034.jpg
+│       ├── MiaPaca-2_E01_D5_035.jpg
+│       ├── MiaPaca-2_E01_D5_036.jpg
+│       ├── MiaPaca-2_E01_D5_037.jpg
+│       ├── MiaPaca-2_E01_D5_038.jpg
+│       ├── MiaPaca-2_E01_D5_039.jpg
+│       ├── MiaPaca-2_E01_D5_043.jpg
+│       ├── MiaPaca-2_E01_D5_044.jpg
+│       ├── MiaPaca-2_E01_D5_045.jpg
+│       ├── MiaPaca-2_E01_D5_046.jpg
+│       ├── MiaPaca-2_E01_D5_047.jpg
+│       ├── MiaPaca-2_E01_D5_048.jpg
+│       ├── MiaPaca-2_E01_D5_049.jpg
+│       ├── MiaPaca-2_E01_D5_050.jpg
+│       ├── MiaPaca-2_E01_D5_051.jpg
+│       ├── MiaPaca-2_E01_D5_052.jpg
+│       ├── MiaPaca-2_E01_D5_053.jpg
+│       ├── MiaPaca-2_E01_D5_054.jpg
+│       ├── MiaPaca-2_E01_D5_055.jpg
+│       ├── MiaPaca-2_E01_D5_056.jpg
+│       ├── MiaPaca-2_E01_D5_057.jpg
+│       ├── MiaPaca-2_E01_D5_058.jpg
+│       ├── MiaPaca-2_E01_D5_059.jpg
+│       ├── MiaPaca-2_E01_D5_060.jpg
+│       ├── MiaPaca-2_E01_D5_061.jpg
+│       ├── MiaPaca-2_E01_D5_062.jpg
+│       ├── MiaPaca-2_E01_D5_063.jpg
+│       ├── MiaPaca-2_E01_D5_064.jpg
+│       ├── MiaPaca-2_E01_D5_065.jpg
+│       ├── MiaPaca-2_E01_D5_067.jpg
+│       ├── MiaPaca-2_E01_D5_068.jpg
+│       ├── MiaPaca-2_E01_D5_069.jpg
+│       ├── MiaPaca-2_E01_D5_070.jpg
+│       ├── MiaPaca-2_E01_D5_071.jpg
+│       ├── MiaPaca-2_E01_D5_072.jpg
+│       ├── MiaPaca-2_E01_D5_073.jpg
+│       ├── MiaPaca-2_E01_D5_074.jpg
+│       ├── MiaPaca-2_E01_D5_075.jpg
+│       ├── MiaPaca-2_E01_D5_076.jpg
+│       ├── MiaPaca-2_E01_D5_077.jpg
+│       ├── MiaPaca-2_E01_D5_079.jpg
+│       ├── MiaPaca-2_E01_D5_081.jpg
+│       ├── MiaPaca-2_E01_D5_082.jpg
+│       ├── MiaPaca-2_E01_D5_083.jpg
+│       ├── MiaPaca-2_E01_D5_084.jpg
+│       ├── MiaPaca-2_E01_D5_085.jpg
+│       ├── MiaPaca-2_E01_D5_086.jpg
+│       ├── MiaPaca-2_E01_D5_087.jpg
+│       ├── MiaPaca-2_E01_D5_088.jpg
+│       ├── MiaPaca-2_E01_D5_089.jpg
+│       ├── MiaPaca-2_E01_D5_090.jpg
+│       ├── MiaPaca-2_E01_D5_091.jpg
+│       ├── MiaPaca-2_E01_D5_092.jpg
+│       ├── MiaPaca-2_E01_D5_093.jpg
+│       ├── MiaPaca-2_E01_D5_094.jpg
+│       ├── MiaPaca-2_E01_D5_095.jpg
+│       ├── MiaPaca-2_E01_D5_096.jpg
+│       ├── MiaPaca-2_E01_D5_097.jpg
+│       ├── MiaPaca-2_E01_D5_098.jpg
+│       ├── MiaPaca-2_E01_D5_099.jpg
+│       ├── MiaPaca-2_E01_D5_100.jpg
+│       ├── MiaPaca-2_E01_D5_101.jpg
+│       ├── MiaPaca-2_E01_D5_102.jpg
+│       ├── MiaPaca-2_E01_D5_104.jpg
+│       ├── MiaPaca-2_E01_D5_105.jpg
+│       ├── MiaPaca-2_E01_D5_106.jpg
+│       ├── MiaPaca-2_E01_D5_107.jpg
+│       ├── MiaPaca-2_E01_D5_108.jpg
+│       ├── MiaPaca-2_E01_D5_109.jpg
+│       ├── MiaPaca-2_E01_D5_110.jpg
+│       ├── MiaPaca-2_E01_D5_111.jpg
+│       ├── MiaPaca-2_E01_D5_112.jpg
+│       ├── MiaPaca-2_E01_D5_113.jpg
+│       ├── MiaPaca-2_E01_D5_114.jpg
+│       ├── MiaPaca-2_E01_D5_115.jpg
+│       ├── MiaPaca-2_E01_D5_116.jpg
+│       ├── MiaPaca-2_E01_D5_117.jpg
+│       ├── MiaPaca-2_E01_D5_118.jpg
+│       ├── MiaPaca-2_E01_D5_119.jpg
+│       ├── MiaPaca-2_E01_D5_120.jpg
+│       ├── MiaPaca-2_E01_D5_121.jpg
+│       ├── MiaPaca-2_E01_D5_122.jpg
+│       ├── MiaPaca-2_E01_D5_123.jpg
+│       ├── MiaPaca-2_E01_D5_124.jpg
+│       ├── MiaPaca-2_E01_D5_125.jpg
+│       ├── MiaPaca-2_E01_D5_126.jpg
+│       ├── MiaPaca-2_E01_D5_127.jpg
+│       ├── MiaPaca-2_E01_D5_129.jpg
+│       ├── MiaPaca-2_E01_D5_130.jpg
+│       ├── MiaPaca-2_E01_D5_131.jpg
+│       ├── MiaPaca-2_E01_D5_132.jpg
+│       ├── MiaPaca-2_E01_D5_134.jpg
+│       ├── MiaPaca-2_E01_D5_135.jpg
+│       ├── MiaPaca-2_E01_D5_136.jpg
+│       ├── MiaPaca-2_E01_D5_137.jpg
+│       ├── MiaPaca-2_E01_D5_138.jpg
+│       ├── MiaPaca-2_E01_D5_139.jpg
+│       ├── MiaPaca-2_E01_D5_140.jpg
+│       ├── MiaPaca-2_E01_D5_142.jpg
+│       ├── MiaPaca-2_E01_D5_143.jpg
+│       ├── MiaPaca-2_E01_D5_144.jpg
+│       ├── MiaPaca-2_E01_D5_145.jpg
+│       ├── MiaPaca-2_E01_D5_146.jpg
+│       ├── UFH-001_Control_2_Pozice_23_000.jpg
+│       ├── UFH-001_Control_2_Pozice_23_001.jpg
+│       ├── UFH-001_Control_2_Pozice_23_002.jpg
+│       ├── UFH-001_Control_2_Pozice_23_003.jpg
+│       ├── UFH-001_Control_2_Pozice_23_004.jpg
+│       ├── UFH-001_Control_2_Pozice_23_006.jpg
+│       ├── UFH-001_Control_2_Pozice_23_007.jpg
+│       ├── UFH-001_Control_2_Pozice_23_008.jpg
+│       ├── UFH-001_Control_2_Pozice_23_009.jpg
+│       ├── UFH-001_Control_2_Pozice_23_010.jpg
+│       ├── UFH-001_Control_2_Pozice_23_011.jpg
+│       ├── UFH-001_Control_2_Pozice_23_012.jpg
+│       ├── UFH-001_Control_2_Pozice_23_013.jpg
+│       ├── UFH-001_Control_2_Pozice_23_014.jpg
+│       ├── UFH-001_Control_2_Pozice_23_015.jpg
+│       ├── UFH-001_Control_2_Pozice_23_016.jpg
+│       ├── UFH-001_Control_2_Pozice_23_017.jpg
+│       ├── UFH-001_Control_2_Pozice_23_018.jpg
+│       ├── UFH-001_Control_2_Pozice_23_019.jpg
+│       ├── UFH-001_Control_2_Pozice_23_020.jpg
+│       ├── UFH-001_Control_2_Pozice_23_021.jpg
+│       ├── UFH-001_Control_2_Pozice_23_022.jpg
+│       ├── UFH-001_Control_2_Pozice_23_023.jpg
+│       ├── UFH-001_Control_2_Pozice_23_024.jpg
+│       ├── UFH-001_Control_2_Pozice_23_025.jpg
+│       ├── UFH-001_Control_2_Pozice_23_026.jpg
+│       ├── UFH-001_Control_2_Pozice_23_027.jpg
+│       ├── UFH-001_Control_2_Pozice_23_028.jpg
+│       ├── UFH-001_Control_2_Pozice_23_029.jpg
+│       ├── UFH-001_Control_2_Pozice_23_030.jpg
+│       ├── UFH-001_Control_2_Pozice_23_031.jpg
+│       ├── UFH-001_Control_2_Pozice_23_032.jpg
+│       ├── UFH-001_Control_2_Pozice_23_033.jpg
+│       ├── UFH-001_Control_2_Pozice_23_034.jpg
+│       ├── UFH-001_Control_2_Pozice_23_035.jpg
+│       ├── UFH-001_Control_2_Pozice_23_036.jpg
+│       ├── UFH-001_Control_2_Pozice_23_037.jpg
+│       ├── UFH-001_Control_2_Pozice_23_038.jpg
+│       ├── UFH-001_Control_2_Pozice_23_039.jpg
+│       ├── UFH-001_Control_2_Pozice_23_040.jpg
+│       ├── UFH-001_Control_2_Pozice_23_041.jpg
+│       ├── UFH-001_Control_2_Pozice_23_042.jpg
+│       ├── UFH-001_Control_2_Pozice_23_043.jpg
+│       ├── UFH-001_Control_2_Pozice_23_045.jpg
+│       ├── UFH-001_Control_2_Pozice_23_046.jpg
+│       ├── UFH-001_Control_2_Pozice_23_047.jpg
+│       ├── UFH-001_Control_2_Pozice_23_048.jpg
+│       ├── UFH-001_Control_2_Pozice_23_049.jpg
+│       ├── UFH-001_Control_2_Pozice_23_050.jpg
+│       └── UFH-001_Control_2_Pozice_23_051.jpg
+└── tree.txt
+
+7 directories, 891 files
